@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
+    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+
+-->
+<synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <type type="webhook.PollingJsonWebhook" extends="webhook.WebHook">
+        <property name="scriptLocation" default="webhook/PollingWebhook.py" hidden="true" />
+        <property name="outputVarHelpText" hidden="true" default="Specify the release variable to store the result of the JSON query in. (Optional)" />
+        <property name="jsonPathExpression" category="input" label="JSON Path Expression"/>
+        <property name="targetValue" category="input" label="Target Value" />
+        <property name="pollingInterval" category="input" kind="integer" />
+        <property name="pollCount" category="input" kind="integer" />
+    </type>
+</synthetic>
