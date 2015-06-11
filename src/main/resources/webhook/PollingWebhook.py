@@ -61,6 +61,7 @@ while x < pollCount:
             if result == targetValue:
                 print "Http Status: %s" % response.status
                 print "JSON %s returned %s" % (jsonPathExpression, result)
+                valueFound = 'True'
                 sys.exit(0)
             else:
                 x += 1
@@ -71,4 +72,8 @@ while x < pollCount:
         sys.exit(1)
 
 print "Poll count hit without %s found" % targetValue
-sys.exit(1)
+valueFound = 'False'
+if continueOnTimeout:
+    sys.exit(0)
+else:
+    sys.exit(1)

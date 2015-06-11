@@ -21,3 +21,5 @@ The xlr-polling-webhook-plugin provides functionality to poll a REST endpoint an
   * `Target Value` - Target value for the JSON Path to return
   * `Polling Interval` - Interval to poll for
   * `Poll Count` - Number of times to poll before the task fails
+  * `Continue On Timeout` - If checked task will not fail on timeout, allowing the release continue
+  * `Value Found` - Output variable, will be set to the string 'True' if the value was found, string 'False' if not. Use if `Continue on Timeout` is checked.

@@ -15,5 +15,7 @@
         <property name="targetValue" category="input" label="Target Value" />
         <property name="pollingInterval" category="input" kind="integer" />
         <property name="pollCount" category="input" kind="integer" />
+        <property name="continueOnTimeout" category="input" kind="boolean" />
+        <property name="valueFound" category="output" />
     </type>
 </synthetic>
