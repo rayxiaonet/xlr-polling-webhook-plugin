@@ -52,8 +52,11 @@ while x < pollCount:
 
     if body is None:
         body = ""
+    if headers != '':
+        json_acceptable_string = headers.replace("'", "\"")
+        headers = json.loads(json_acceptable_string)
 
-    response = request.doRequest(method = method, context = context, body = body, contentType = content_type)
+    response = request.doRequest(method = method, context = context, body = body, contentType = content_type, headers = headers)
 
     if response.isSuccessful():
         if isJson():
