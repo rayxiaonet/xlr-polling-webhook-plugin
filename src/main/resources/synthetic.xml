@@ -9,6 +9,7 @@
 <synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <type type="webhook.PollingJsonWebhook" extends="webhook.WebHook">
+        <property name="headers" category="input" size="large" required="false"/>
         <property name="scriptLocation" default="webhook/PollingWebhook.py" hidden="true" />
         <property name="outputVarHelpText" hidden="true" default="Specify the release variable to store the result of the JSON query in. (Optional)" />
         <property name="jsonPathExpression" category="input" label="JSON Path Expression"/>
